@@ -20,3 +20,14 @@ def registrarPaquete(listaPaquetes):
     listaPaquetes.append(diccionarioPaquetes)
     guardarArchivo("Paquetes.json",listaPaquetes)
     return listaPaquetes
+
+def eliminarPaquete(listaPaquetes):
+    paquete_a_eliminar = input("Dime el nombre del paquete a eliminar: ").capitalize
+
+    for paquete in listaPaquetes:
+        if paquete["Nombre"] == paquete_a_eliminar:
+            listaPaquetes.remove(paquete)
+            print("Paquete eliminado")
+            return
+    
+    print("No se encontro el paquete")
