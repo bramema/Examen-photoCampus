@@ -27,7 +27,6 @@ def eliminarPaquete(listaPaquetes):
     for paquete in listaPaquetes:
         if paquete["Nombre"] == paquete_a_eliminar:
             listaPaquetes.remove(paquete)
-            print("Paquete eliminado")
             return
     
     print("No se encontro el paquete")
