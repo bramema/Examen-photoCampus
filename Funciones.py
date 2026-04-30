@@ -9,6 +9,10 @@ def leerArchivo(ruta):
 def guardarArchivo(ruta,datos):
     with open(ruta,"w")as file:
         json.dump(datos,file,indent=4)
+def VerPaquetes():
+    Contenido = leerArchivo("Paquetes.json") 
+    print (Contenido)
+    
 
 def registrarPaquete(listaPaquetes):
     diccionarioPaquetes = {
