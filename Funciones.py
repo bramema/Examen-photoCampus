@@ -13,3 +13,24 @@ def VerPaquetes():
     Contenido = leerArchivo("Paquetes.json") 
     print (Contenido)
     
+
+def registrarPaquete(listaPaquetes):
+    diccionarioPaquetes = {
+        "Nombre":input("digite nombre: "),
+        "Cantidad":input("digite el numero de fotos: "),
+        "Precio":input("digite precio: "),
+        "Duracion":input("digite la duracion en horas: ")
+    }
+    listaPaquetes.append(diccionarioPaquetes)
+    guardarArchivo("Paquetes.json",listaPaquetes)
+    return listaPaquetes
+
+def eliminarPaquete(listaPaquetes):
+    paquete_a_eliminar = input("Dime el nombre del paquete a eliminar: ").capitalize
+
+    for paquete in listaPaquetes:
+        if paquete["Nombre"] == paquete_a_eliminar:
+            listaPaquetes.remove(paquete)
+            return
+    
+    print("No se encontro el paquete")
