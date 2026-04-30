@@ -1,3 +1,4 @@
+
 import json
 def leerArchivo(ruta):
     try:
@@ -9,7 +10,7 @@ def leerArchivo(ruta):
 def guardarArchivo(ruta,datos):
     with open(ruta,"w")as file:
         json.dump(datos,file,indent=4)
-
+        
 def registrarPaquete(listaPaquetes):
     diccionarioPaquetes = {
         "Nombre":input("digite nombre: "),
@@ -30,3 +31,6 @@ def eliminarPaquete(listaPaquetes):
             return
     
     print("No se encontro el paquete")
+=======
+def VerProductos():    
+>>>>>>> ab67548 (feat: VerProductos())
